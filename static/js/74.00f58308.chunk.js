@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkums=self.webpackChunkums||[]).push([[74],{74:(s,e,u)=>{u.r(e),u.d(e,{default:()=>c});var a=u(579);const c=()=>(0,a.jsx)("div",{children:"Users page"})}}]);
+//# sourceMappingURL=74.00f58308.chunk.js.map

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkums=self.webpackChunkums||[]).push([[935],{935:(s,e,a)=>{a.r(e),a.d(e,{default:()=>c});var u=a(579);const c=()=>(0,u.jsx)("div",{children:"Dashboard page"})}}]);
+//# sourceMappingURL=935.4b64feaa.chunk.js.map
