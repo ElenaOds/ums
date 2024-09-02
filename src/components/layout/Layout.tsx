@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import Sidebar from '../sidebar/Sidebar';
 import Loader from '../loader/Loader';
+import Header from '../header/Header';
 
 import { Main } from './Layout.styled';
 
@@ -12,6 +13,7 @@ const Layout = () => {
   return (
     <div>
     <Sidebar />
+    <Header />
     <Main>
      <Suspense fallback={<Loader />}> 
         <Outlet />

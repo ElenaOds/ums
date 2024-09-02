@@ -1,10 +1,10 @@
-import React from 'react'
+import { StyledHeader } from './Header.styled';
 
 const Header = () => {
   return (
-    <div>
+    <StyledHeader>
       Header
-    </div>
+    </StyledHeader>
   )
 }
 

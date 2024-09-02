@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import { getItems } from '../api/usersApi';
 import { User, FetchError } from '../types';
 
-export const getUsers = createAsyncThunk<User[], { rejectValue: FetchError }> ('users/get', async (_, thunkAPI) => {
+export const getUsers = createAsyncThunk<User[], void, { rejectValue: FetchError }> ('users/get', async (_, thunkAPI) => {
     try {
       const { data } = await getItems();
       return data;

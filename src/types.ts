@@ -8,4 +8,9 @@ export interface User {
 
   export type FetchError = {
     message: string;
-  };
+  }
+
+  export interface PaginationProps {
+    page: number;
+  
+  }
