@@ -2,27 +2,59 @@ import { useState, useEffect } from 'react';
 import { useTypedSelector, useAppDispatch } from '../../redux/store';
 import { getUsers } from '../../redux/operations';
 
+import Filter from '../../components/filter/Filter';
 import Table from '../../components/table/Table';
 import Pagination from '../../components/pagination/Pagination';
 
-import { Section } from './usersPage.styled';
+import { TableContainer } from './UsersPage.styled';
 
 const UsersPage: React.FC = () => {
   const [page, setPage] = useState<number>(1);
   const dispatch = useAppDispatch();
   const users = useTypedSelector((state) => state.users.data);
-  const filter = useTypedSelector((state) => state.filter.filter);
+  const filter = useTypedSelector((state) => state.filter);
 
   useEffect(() => {
     dispatch(getUsers());
     setPage(1);
   }, [dispatch, filter]);
 
+  
+  const filteredUsers = users.filter((user) =>
+    (filter.name ? user.name.toLowerCase().includes(filter.name.toLowerCase()) : true) &&
+    (filter.userName ? user.userName.toLowerCase().includes(filter.userName.toLowerCase()) : true) &&
+    (filter.email ? user.email.toLowerCase().includes(filter.email.toLowerCase()) : true) &&
+    (filter.phone ? user.phone.toLowerCase().includes(filter.phone.toLowerCase()) : true)
+  );
+
+  let usersPerPage = 10;
+
+  const handleClickNext = () => {
+    setPage((prevPage) => prevPage + 1)
+  }
+  
+  const handleClickPrevious = () => {
+    setPage((prevPage) => prevPage - 1)
+  }
+  
+  const handlePageSet = (pageNumber: number) => {
+    setPage (pageNumber)
+  }
+
   return (
-    <Section>
-      <Table users={users}/>
-      <Pagination page={page}/>
-    </Section>
+    <section>
+      <Filter />
+      <TableContainer>
+        <Table users={filteredUsers} usersPerPage={usersPerPage} page={page}/>
+        <Pagination 
+          page={page} 
+          handleClickNext={handleClickNext} 
+          handleClickPrevious={handleClickPrevious} 
+          handlePageSet={handlePageSet} 
+          usersPerPage={usersPerPage}
+          totalUsers={users.length}/>
+      </TableContainer>
+    </section>
   )
 }
 

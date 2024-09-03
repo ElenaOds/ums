@@ -1,38 +1,33 @@
-import { User } from '../../types';
+import { TableProps } from '../../types';
+import { StyledTable, TableHead, TableData } from './Table.styled';
 
-interface TableProps {
-  users: User[];
-}
 
-const Table: React.FC<TableProps> = ({ users }) => {
+const Table: React.FC<TableProps> = ({ users, usersPerPage, page }) => {
 
   console.log(users)
   return (
-    <>
-    <table>
+    <StyledTable>
       <thead>
         <tr>
-          <th>Name</th>
-          <th>userName</th>
-          <th>Email</th>
-          <th>Phone</th>
+          <TableHead>Name</TableHead>
+          <TableHead>Username</TableHead>
+          <TableHead>Email</TableHead>
+          <TableHead>Phone</TableHead>
         </tr>
       </thead>
       <tbody>
-          {users?.map((user) => {
+          {users?.slice((page - 1) * usersPerPage, page * usersPerPage).map((user) => {
             return (
               <tr key={user.id} id={user.id}>
-              <td>{user.name}</td>
-              <td>{user.userName}</td>
-              <td>{user.email}</td>
-              <td>{user.phone}</td>
+              <TableData>{user.name}</TableData>
+              <TableData>{user.userName}</TableData>
+              <TableData>{user.email}</TableData>
+              <TableData>{user.phone}</TableData>
               </tr>
             )
           })}
       </tbody>
-    </table>
-    </>
- 
+    </StyledTable>
   )
 }
 

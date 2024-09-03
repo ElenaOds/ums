@@ -1,12 +1,14 @@
 @import-normalize;
 
 :root {
-  --bgd-color: #F9FAFB;
+  --bg-color: #FAFAFA;
   --text-color: #111827;
   --secondary-text-color: #fff;
-        
-  
+  --border-color: #D1D5DB;
+  --pagination-color: #6B7280;
+  --hover-color: #1D4ED8;
 }
+
 
 body {
   margin: 0;
@@ -17,8 +19,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-optical-sizing: auto;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.2;
   background-color: var(--bgd-color);
+  color: var(--text-color);
 }
 
 code {

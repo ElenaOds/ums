@@ -76,19 +76,25 @@ export const NavbarItem = styled.li`
   gap: 10px;
   cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: var(--secondary-text-color);
     }
 
-    &:hover > ${StyledUsers} {
+    &:hover > ${StyledUsers},
+    &:focus > ${StyledUsers} {
       stroke: var(--text-color);
     }
 
-     &:hover > ${StyledDashboard} {
+   
+    &:hover > ${StyledDashboard},
+    &:focus > ${StyledDashboard} {
       stroke: var(--text-color);
     }
 
-    &:hover > ${StyledLink} {
+  
+    &:hover > ${StyledLink},
+    &:focus > ${StyledLink} {
       color: var(--text-color);
     }
 `;
