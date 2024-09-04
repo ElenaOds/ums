@@ -108,5 +108,4 @@ export const SidebarExit = styled.p`
 export const ExitIcon = styled(Exit)`
   width: 18px;
   height: 18px;
-  
 `

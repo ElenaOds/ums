@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import MobileMenu from '../mobileMenu/MobileMenu';
 import Image from '../../assets/images/avatar.png';
-import { StyledHeader, Title, UserWrapper, Img, UserName, UserEmail, ModalBtn, FirstLine, SecondLine, ThirdLine } from './Header.styled';
+import { StyledHeader, Title, UserWrapper, Img, UserName, UserEmail, ModalBtn, FirstLine, SecondLine, ThirdLine, UserNameWrapper } from './Header.styled';
 
 const Header: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -28,10 +28,10 @@ const Header: React.FC = () => {
       <Title>{getHeaderText()}</Title>
       <UserWrapper>
         <Img src={Image} alt="avatar"/>
-        <div>
+        <UserNameWrapper>
           <UserName>Adam Smith</UserName>
           <UserEmail>adamsmith@gmail.com</UserEmail>
-        </div>
+        </UserNameWrapper>
       
       <ModalBtn type="button" onClick={toggleModal} className={isModalOpen ? 'isOpen' : ''}>
         <FirstLine></FirstLine>

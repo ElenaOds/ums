@@ -1,10 +1,8 @@
 import { TableProps } from '../../types';
 import { StyledTable, TableHead, TableData } from './Table.styled';
 
-
 const Table: React.FC<TableProps> = ({ users, usersPerPage, page }) => {
 
-  console.log(users)
   return (
     <StyledTable>
       <thead>

@@ -72,6 +72,14 @@ export const Img = styled.img`
     }
 `;
 
+export const UserNameWrapper = styled.div`
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: block;
+    }
+`;
+
 export const UserName = styled.p`
     font-weight: 700;
     font-size: 12px;
@@ -162,3 +170,4 @@ export const ModalBtn = styled.button`
         transform: rotate(-45deg);
     }
 `;
+
