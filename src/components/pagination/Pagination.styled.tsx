@@ -17,16 +17,16 @@ export const PaginationWrapper = styled.div`
 `
 
 export const PageBtn = styled.button`
-    display: inline-block;
+    display: block;
     font-size: 10px;
     background-color: var(--pagination-color);
     color: var(--secondary-text-color);
-    outline: none;
     border-radius: 6px;
     border: none;
     cursor: pointer;
-    width: 50px;
-    height: 20px;   
+    width: 60px;
+    height: 20px;  
+    text-align: center; 
 
     &:disabled {
     background-color: #c0c0c0;
@@ -47,15 +47,15 @@ export const PageBtn = styled.button`
 `
 
 export const PageNumBtn = styled.button`
-    display: inline-block;
+    display: block;
     font-size: 10px;
     color: var(--secondary-text-color);
-    outline: none;
     border-radius: 6px;
     border: none;
     cursor: pointer;
     width: 22px;
     height: 20px;
+    text-align: center;
   
     @media screen and (min-width: 768px) {
         font-size: 12px;

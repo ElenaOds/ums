@@ -6,7 +6,7 @@ import Filter from '../../components/filter/Filter';
 import Table from '../../components/table/Table';
 import Pagination from '../../components/pagination/Pagination';
 
-import { TableContainer } from './UsersPage.styled';
+import { TableContainer, TaleText } from './UsersPage.styled';
 
 const UsersPage: React.FC = () => {
   const [page, setPage] = useState<number>(1);
@@ -45,14 +45,19 @@ const UsersPage: React.FC = () => {
     <section>
       <Filter />
       <TableContainer>
+        {filteredUsers.length > 0 ? 
         <Table users={filteredUsers} usersPerPage={usersPerPage} page={page}/>
+        : <TaleText>No users found matching your request</TaleText>
+        }
+        {filteredUsers.length > 0 &&
         <Pagination 
           page={page} 
           handleClickNext={handleClickNext} 
           handleClickPrevious={handleClickPrevious} 
           handlePageSet={handlePageSet} 
           usersPerPage={usersPerPage}
-          totalUsers={users.length}/>
+          totalUsers={filteredUsers.length}/>
+        }
       </TableContainer>
     </section>
   )

@@ -63,6 +63,7 @@ export const TableData = styled.td`
     padding-top: 16px;
     padding-bottom: 16px;
     background-color: var(--bg-color);
+    text-decoration: none;
 
     &:first-child {
         border-top-left-radius: 4px;

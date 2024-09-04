@@ -31,9 +31,7 @@ return (
             <Button type="button" aria-label="clear" onClick={() => handleClear('name')}>
                 <CrossIcon/>
             </Button>
-        }
-            
-            
+            }
         </Label>
      
         <Label htmlFor="userName"><Labeltext>Seach by username</Labeltext>
@@ -83,4 +81,4 @@ return (
   )
 }
 
-export default Filter
+export default Filter;

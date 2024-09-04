@@ -5,7 +5,7 @@ import { ReactComponent as Cross} from '../../assets/icons/cross.svg';
 
 export const FilterContainer = styled.div`
     padding: 14px 20px;
-    background-color: #F3F4F6;
+    background-color: var(--secondary-text-color);
     display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
@@ -35,14 +35,14 @@ export const Label = styled.label`
 
 
 export const Labeltext = styled.p`
-    font-size: 10px;
+    font-size: 8px;
 
     @media screen and (min-width: 768px) {
-        font-size: 12px;
+        font-size: 10px;
         
     }
     @media screen and (min-width: 1280px) {
-        font-size: 14px;
+        font-size: 12px;
     }
 `;
 

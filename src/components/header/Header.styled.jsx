@@ -95,4 +95,70 @@ export const UserEmail = styled.p`
     @media screen and (min-width: 1280px) {
         font-size: 14px;
     }
-`
+`;
+
+
+export const FirstLine = styled.span`
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: var(--text-color);
+    border-radius: 1px;
+    height: 2px;
+    transition: all 0.3s ease-in-out;
+`;
+
+export const SecondLine = styled.span`
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 100%;
+    background-color: var(--text-color);
+    border-radius: 1px;
+    height: 2px;
+    transition: all 0.3s ease-in-out;
+`;
+
+export const ThirdLine = styled.span`
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 100%;
+    background-color: var(--text-color);
+    border-radius: 1px;
+    height: 2px;
+    transition: all 0.3s ease-in-out;
+`;
+
+export const ModalBtn = styled.button`
+    display: block;
+    position: relative;
+    width: 19px;
+    height: 19px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+
+    @media screen and (min-width: 1280px) {
+        display: none;
+    }
+
+    &.isOpen > ${FirstLine} {
+        transform: rotate(45deg);
+        top: 7px;
+    }
+
+    &.isOpen > ${SecondLine} {
+         opacity: 0;
+    }
+
+    &.isOpen > ${ThirdLine} {
+        top: 7px;
+        transform: rotate(-45deg);
+    }
+`;

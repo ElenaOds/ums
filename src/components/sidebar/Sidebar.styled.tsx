@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { ReactComponent as Logo} from '../../assets/icons/logo.svg';
 import { ReactComponent as Dashboard} from '../../assets/icons/dashboard.svg';
 import { ReactComponent as Users} from '../../assets/icons/users.svg';
+import { ReactComponent as Exit} from '../../assets/icons/exit.svg';
 
 export const Aside = styled.aside`
     display: none;
@@ -18,6 +19,7 @@ export const Aside = styled.aside`
       padding: 36px 20px;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
     }
 `;
 
@@ -48,54 +50,63 @@ export const NavbarList = styled.ul`
   gap: 18px;
 `;
 
-export const StyledLink = styled(NavLink)`  
-    color: var(--secondary-text-color);
-    font-weight: 600;
-    font-size: 16px;
-`;
-
-
 export const StyledDashboard = styled(Dashboard)`  
     width: 26px;
     height: 26px;
-    stroke: var(--secondary-text-color);
+    fill: var(--secondary-text-color);
 `;
 
 export const StyledUsers = styled(Users)`  
     width: 26px;
     height: 26px;
-    stroke: var(--secondary-text-color);
+    fill: var(--secondary-text-color);
 `;
 
-
-export const NavbarItem = styled.li`
+export const StyledLink = styled(NavLink)`  
   padding: 11px 8px 11px 11px;
   border-radius: 8px; 
   display: flex;
   align-items: center;
   gap: 10px;
   cursor: pointer;
+  color: var(--secondary-text-color);
+  font-weight: 600;
+  font-size: 16px;
 
-    &:hover,
-    &:focus {
+    &.active {
+      color: var(--secondary-text-color);
+      background-color: #1D4ED8;
+    }
+
+    &:hover {
       background-color: var(--secondary-text-color);
-    }
-
-    &:hover > ${StyledUsers},
-    &:focus > ${StyledUsers} {
-      stroke: var(--text-color);
-    }
-
-   
-    &:hover > ${StyledDashboard},
-    &:focus > ${StyledDashboard} {
-      stroke: var(--text-color);
-    }
-
-  
-    &:hover > ${StyledLink},
-    &:focus > ${StyledLink} {
       color: var(--text-color);
+    }
+
+    &:hover > ${StyledUsers} {
+      fill: var(--text-color);
+    }
+
+    &:hover > ${StyledDashboard} {
+      fill: var(--text-color);
     }
 `;
 
+export const ExitWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+`
+export const SidebarExit = styled.p`
+    color: var(--secondary-text-color);
+    font-weight: 600;
+    font-size: 16px;
+`;
+
+export const ExitIcon = styled(Exit)`
+  width: 18px;
+  height: 18px;
+  
+`
