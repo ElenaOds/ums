@@ -6,7 +6,7 @@ A web-application which allows to get the list of users and search for specific 
 ### Technologies used:
 <ul>
 <li>React</li>
-<li>TypScript</li>
+<li>TypeScript</li>
 <li>Axios</li>
 <li>React Loader</li>
 <li>Redux Toolkit</li>

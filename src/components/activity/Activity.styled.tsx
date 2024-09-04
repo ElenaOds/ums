@@ -30,6 +30,10 @@ export const ActivityTable = styled.table`
     width: 100%;
     border-collapse: separate;
     border-spacing: 0 5px;
+
+    & > tbody > tr:nth-of-type(even) {
+    background-color: #fff;
+    }
 `;
 
 const tableHead = css`
