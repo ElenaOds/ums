@@ -192,7 +192,6 @@
     padding-top: 16px;
     padding-bottom: 16px;
     background-color: var(--bg-color);
-    text-decoration: none;
 
     &:first-child {
         border-top-left-radius: 4px;
@@ -233,7 +232,7 @@
         padding-top: 20px;
         padding-bottom: 20px;
     }
-`,L=e=>{let{users:n,usersPerPage:i,page:t}=e;return console.log(n),(0,C.jsxs)(z,{children:[(0,C.jsx)("thead",{children:(0,C.jsxs)("tr",{children:[(0,C.jsx)(N,{children:"Name"}),(0,C.jsx)(N,{children:"Username"}),(0,C.jsx)(N,{children:"Email"}),(0,C.jsx)(N,{children:"Phone"})]})}),(0,C.jsx)("tbody",{children:null===n||void 0===n?void 0:n.slice((t-1)*i,t*i).map((e=>(0,C.jsxs)("tr",{id:e.id,children:[(0,C.jsx)(A,{children:e.name}),(0,C.jsx)(A,{children:e.userName}),(0,C.jsx)(A,{children:e.email}),(0,C.jsx)(A,{children:e.phone})]},e.id)))})]})},P=o.Ay.div`
+`,L=e=>{let{users:n,usersPerPage:i,page:t}=e;return(0,C.jsxs)(z,{children:[(0,C.jsx)("thead",{children:(0,C.jsxs)("tr",{children:[(0,C.jsx)(N,{children:"Name"}),(0,C.jsx)(N,{children:"Username"}),(0,C.jsx)(N,{children:"Email"}),(0,C.jsx)(N,{children:"Phone"})]})}),(0,C.jsx)("tbody",{children:null===n||void 0===n?void 0:n.slice((t-1)*i,t*i).map((e=>(0,C.jsxs)("tr",{id:e.id,children:[(0,C.jsx)(A,{children:e.name}),(0,C.jsx)(A,{children:e.userName}),(0,C.jsx)(A,{children:e.email}),(0,C.jsx)(A,{children:e.phone})]},e.id)))})]})},P=o.Ay.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -320,4 +319,4 @@
         font-size: 14px;
     }
 `,D=()=>{const[e,n]=(0,a.useState)(1),i=(0,d.jL)(),t=(0,d.N4)((e=>e.users.data)),p=(0,d.N4)((e=>e.filter));(0,a.useEffect)((()=>{i((0,r.l)()),n(1)}),[i,p]);const o=t.filter((e=>(!p.name||e.name.toLowerCase().includes(p.name.toLowerCase()))&&(!p.userName||e.userName.toLowerCase().includes(p.userName.toLowerCase()))&&(!p.email||e.email.toLowerCase().includes(p.email.toLowerCase()))&&(!p.phone||e.phone.toLowerCase().includes(p.phone.toLowerCase()))));return(0,C.jsxs)("section",{children:[(0,C.jsx)(k,{}),(0,C.jsxs)(O,{children:[o.length>0?(0,C.jsx)(L,{users:o,usersPerPage:10,page:e}):(0,C.jsx)(R,{children:"No users found matching your request"}),o.length>0&&(0,C.jsx)(S,{page:e,handleClickNext:()=>{n((e=>e+1))},handleClickPrevious:()=>{n((e=>e-1))},handlePageSet:e=>{n(e)},usersPerPage:10,totalUsers:o.length})]})]})}}}]);
-//# sourceMappingURL=597.a7235085.chunk.js.map
+//# sourceMappingURL=597.3e77186f.chunk.js.map
