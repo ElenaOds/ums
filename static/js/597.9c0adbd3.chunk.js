@@ -223,7 +223,7 @@
     }
 
     @media screen and (min-width: 768px) {
-        font-size: 12px;
+        font-size: 10px;
         padding-top: 18px;
         padding-bottom: 18px;
     }
@@ -319,4 +319,4 @@
         font-size: 14px;
     }
 `,D=()=>{const[e,n]=(0,a.useState)(1),{users:i}=(0,r.k)(),t=(0,d.N4)((e=>e.filter));(0,a.useEffect)((()=>{n(1)}),[t]);const p=i.filter((e=>(!t.name||e.name.toLowerCase().includes(t.name.toLowerCase()))&&(!t.userName||e.userName.toLowerCase().includes(t.userName.toLowerCase()))&&(!t.email||e.email.toLowerCase().includes(t.email.toLowerCase()))&&(!t.phone||e.phone.toLowerCase().includes(t.phone.toLowerCase()))));return(0,C.jsxs)("section",{children:[(0,C.jsx)(k,{}),(0,C.jsxs)(O,{children:[p.length>0?(0,C.jsx)(P,{users:p,usersPerPage:10,page:e}):(0,C.jsx)(R,{children:"No users found matching your request"}),p.length>0&&(0,C.jsx)(S,{page:e,handleClickNext:()=>{n((e=>e+1))},handleClickPrevious:()=>{n((e=>e-1))},handlePageSet:e=>{n(e)},usersPerPage:10,totalUsers:p.length})]})]})}}}]);
-//# sourceMappingURL=597.9a679e55.chunk.js.map
+//# sourceMappingURL=597.9c0adbd3.chunk.js.map

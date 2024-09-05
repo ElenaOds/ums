@@ -194,10 +194,10 @@
 `,RZ=M.Ay.td`
     padding: 6px 20px;
     text-align: left; 
-    font-size: 10px;
+    font-size: 8px;
 
     @media screen and (min-width: 768px) {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     @media screen and (min-width: 1280px) {
@@ -225,4 +225,4 @@
        flex-direction: row;
     }
 `,KZ=()=>(0,c.jsx)("section",{children:(0,c.jsxs)(GZ,{children:[(0,c.jsx)(p,{}),(0,c.jsxs)(JZ,{children:[(0,c.jsx)($Z,{}),(0,c.jsx)(qZ,{})]})]})})}}]);
-//# sourceMappingURL=843.41dc2c31.chunk.js.map
+//# sourceMappingURL=843.084c4da4.chunk.js.map
