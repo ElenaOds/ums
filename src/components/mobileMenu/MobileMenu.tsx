@@ -25,16 +25,22 @@ const MobileMenu: React.FC<ModalProps> = ({onClose, isModalOpen}) => {
         <Img src={Image} alt="logo"/>
         <MobileTitle>User management system</MobileTitle>
       </TitleWrapper>
+      <nav>
         <Nav>
+          <li>
           <StyledMenuLink to='/dashboard' aria-label="link to dashboard page" onClick={onClose}>
           <ModileDashboard/>
             Dashboard
           </StyledMenuLink>
+          </li>
+          <li>
           <StyledMenuLink to='users' aria-label="link to users page" onClick={onClose}>
             <ModileUsers/>
             Users
             </StyledMenuLink>
+          </li>
         </Nav>
+        </nav>
         <ExitWrapper>
         <ExitIcon/>
         <MenuExit>Exit</MenuExit>

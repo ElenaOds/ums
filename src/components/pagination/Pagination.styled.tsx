@@ -47,7 +47,9 @@ export const PageBtn = styled.button`
 `
 
 export const PageNumBtn = styled.button`
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 10px;
     color: var(--secondary-text-color);
     border-radius: 6px;
@@ -55,7 +57,6 @@ export const PageNumBtn = styled.button`
     cursor: pointer;
     width: 22px;
     height: 20px;
-    text-align: center;
   
     @media screen and (min-width: 768px) {
         font-size: 12px;
@@ -68,6 +69,4 @@ export const PageNumBtn = styled.button`
         width: 30px;
         height: 30px;  
     }
-    
-
-`
+`;

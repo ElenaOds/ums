@@ -1,18 +1,10 @@
-import { useEffect } from 'react';
-import { useTypedSelector, useAppDispatch } from '../../redux/store';
-import { getUsers } from '../../redux/operations';
+import { useUsers } from '../../context/UserContext';
 import { User } from '../../types';
 
 import { ActivityWrapper, ActivityItemTitle, ActivityTable, UserHead, NameHead, PercentHead, TableData } from './Activity.styled';
 
 const Activity: React.FC = () => {
-    const dispatch = useAppDispatch();
-    const users = useTypedSelector((state) => state.users.data);
-   
-
-    useEffect(() => {
-      dispatch(getUsers());
-    }, [dispatch]);
+  const { users } = useUsers();
 
     const shuffleArray = (array: User[]) => {
         for (let i = array.length - 1; i > 0; i--) {

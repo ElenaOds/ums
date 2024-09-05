@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { useTypedSelector, useAppDispatch } from '../../redux/store';
-import { getUsers } from '../../redux/operations';
+import { useTypedSelector } from '../../redux/store';
+import { useUsers } from '../../context/UserContext';
 
 import Filter from '../../components/filter/Filter';
 import Table from '../../components/table/Table';
@@ -10,14 +10,13 @@ import { TableContainer, TaleText } from './UsersPage.styled';
 
 const UsersPage: React.FC = () => {
   const [page, setPage] = useState<number>(1);
-  const dispatch = useAppDispatch();
-  const users = useTypedSelector((state) => state.users.data);
+  const { users } = useUsers();
   const filter = useTypedSelector((state) => state.filter);
 
+
   useEffect(() => {
-    dispatch(getUsers());
     setPage(1);
-  }, [dispatch, filter]);
+  }, [filter]);
 
   
   const filteredUsers = users.filter((user) =>

@@ -9,6 +9,7 @@ export const StyledTable = styled.table`
     margin-bottom: 16px;
 
     @media screen and (min-width: 768px) {
+        table-layout: fixed;
         border-spacing: 0 8px;
         margin-bottom: 20px;
     }

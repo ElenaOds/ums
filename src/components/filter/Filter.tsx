@@ -19,7 +19,7 @@ const Filter = () => {
 
 return (
     <FilterContainer>
-        <Label htmlFor="name"> <Labeltext>Seach by name</Labeltext>
+        <Label htmlFor="name"><Labeltext>Seach by name</Labeltext>
             <Input
                 type="text"
                 name="name"

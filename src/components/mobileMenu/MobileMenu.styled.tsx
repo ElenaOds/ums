@@ -10,22 +10,21 @@ export const Overlay = styled.div`
     display: flex;
     flex-direction: column;
     top: 56px;
-   
     left: 0;
     width: 100vw;
     height: 100vh;
     padding: 40px;
     background-color: var(--text-color);
     z-index: 100;
-    gap: 80px;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 
  
    @media screen and (min-width: 768px) {
       top: 82px;
       padding: 60px;
-      gap: 100px;
     }
 
     @media screen and (min-width: 1280px) {
@@ -44,17 +43,18 @@ export const MobileTitle = styled.h1`
 
   @media screen and (min-width: 768px) {
     font-size: 24px;
-
   }
 `;
 
-export const Nav = styled.nav`
+export const Nav = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 30px;
+  margin-bottom: 150px;
 
   @media screen and (min-width: 768px) {
     gap: 40px;
+    margin-bottom: 200px;
   }
 `
 export const ModileDashboard = styled(Dashboard)`
@@ -109,6 +109,12 @@ export const TitleWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-bottom: 80px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+    margin-bottom: 100px;
+  }
 `
 
 export const Img = styled.img`
