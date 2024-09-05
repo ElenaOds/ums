@@ -71,10 +71,10 @@ export const PercentHead = styled.th`
 export const TableData = styled.td`
     padding: 6px 20px;
     text-align: left; 
-    font-size: 10px;
+    font-size: 8px;
 
     @media screen and (min-width: 768px) {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     @media screen and (min-width: 1280px) {

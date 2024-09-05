@@ -94,7 +94,7 @@ export const TableData = styled.td`
     }
 
     @media screen and (min-width: 768px) {
-        font-size: 12px;
+        font-size: 10px;
         padding-top: 18px;
         padding-bottom: 18px;
     }
